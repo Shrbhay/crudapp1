@@ -1,0 +1,35 @@
+ {% extends 'base.html' %}
+
+{% block body %}
+   <h1>this is home page</h1> -->
+
+<div class="container">
+
+    {% for i in allemployee  %}
+        {{i.sno}} - {{i.name}} - {{i.email}}
+        <hr>
+    {% endfor %}
+</div> 
+
+ <div class="container">
+    <h1 class ='text-center'>ALL EMPLOYEE DATA</h1>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">S_NO</th>
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in allemployee  %}
+    <tr>
+      <th scope="row">{{i.sno}}</th>
+      <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+    </tr> 
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock body %}
